@@ -1,5 +1,7 @@
-{{#each customer in model}}
+{{#each customer in controller}}
   {{#link-to 'customer' customer.CustomerID tagName="li"}}
     {{customer.ContactName}}
   {{/link-to}}
 {{/each}}
+
+<a href='#' {{action 'sortByName'}}>Sort by Name</a>
