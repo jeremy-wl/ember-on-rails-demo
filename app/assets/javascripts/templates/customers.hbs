@@ -1,5 +1,5 @@
 {{#each customer in controller}}
-  {{#link-to 'customer' customer.CustomerID tagName="li"}}
+  {{#link-to 'customer' customer.id tagName="li"}}
     {{customer.ContactName}}
   {{/link-to}}
 {{/each}}

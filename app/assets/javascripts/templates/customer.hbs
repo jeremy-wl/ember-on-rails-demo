@@ -1,5 +1,16 @@
-<li>{{model.CustomerID}}</li>
-<li>{{model.ContactName}}</li>
-<li>{{model.Address}}</li>
+<table>
+  <tr>
+    <td>Customer ID:</td>
+    <td>{{model.id}}</td>
+  </tr>
+  <tr>
+    <td>Contact Name:</td>
+    <td>{{model.ContactName}}</td>
+  </tr>
+  <tr>
+    <td>Address:</td>
+    <td>{{model.Address}}</td>
+  </tr>
+</table>
 
 {{#link-to 'customers'}}Back to customers{{/link-to}}
