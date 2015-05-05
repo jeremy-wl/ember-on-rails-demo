@@ -3,8 +3,10 @@
       <span class="caret"></span>
   </h1>
   
+  {{input value=filterText type='text' placeholder='Search for customer' autofocus="autofocus"}}
+  
   <ul>
-    {{#each customer in controller}}
+    {{#each customer in filteredResults}}
     {{#link-to 'customer' customer.id tagName="li"}}
       {{customer.ContactName}}
     {{/link-to}}
