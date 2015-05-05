@@ -3,15 +3,29 @@ App.CustomerSerializer = DS.RESTSerializer.extend({
     
     return payload.map(function(customer) {
     	customer.id = customer.CustomerID;
+    	if (customer.Fax == null)
+    	  customer.Fax = "N/A";
+    	if (customer.Region == null)
+    	  customer.Region = "N/A";
       return customer;
       
     });
   }
 })
 
+var attr = DS.attr; 
+
 App.Customer = DS.Model.extend({
     
-    ContactName:  DS.attr('string'),
-    Address:      DS.attr('string'),
-    
+    Address:      attr('string'),
+    City:         attr('string'),
+    CompanyName:  attr('string'),
+    ContactName:  attr('string'),
+    ContactTitle: attr('string'),
+    Country:      attr('string'),
+    Fax:          attr('string'),
+    Phone:        attr('string'),
+    PostalCode:   attr('string'),
+    Region:       attr('string'),
+
 })
