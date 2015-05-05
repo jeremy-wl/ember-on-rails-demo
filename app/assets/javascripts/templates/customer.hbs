@@ -1,48 +1,49 @@
-<table>
-  <tr>
-    <td>Customer ID:</td>
-    <td>{{model.id}}</td>
-  </tr>
-  <tr>
-    <td>Address:</td>
-    <td>{{model.Address}}</td>
-  </tr>
-  <tr>
-    <td>City:</td>
-    <td>{{model.City}}</td>
-  </tr>
-  <tr>
-    <td>Company Name:</td>
-    <td>{{model.CompanyName}}</td>
-  </tr>
-  <tr>
-    <td>Contact Name:</td>
-    <td>{{model.ContactName}}</td>
-  </tr>
-  <tr>
-    <td>Contact Title:</td>
-    <td>{{model.ContactTitle}}</td>
-  </tr>
-  <tr>
-    <td>Country:</td>
-    <td>{{model.Country}}</td>
-  </tr>
-  <tr>
-    <td>Fax:</td>
-    <td>{{model.Fax}}</td>
-  </tr>
-  <tr>
-    <td>Phone:</td>
-    <td>{{model.Phone}}</td>
-  </tr>
-  <tr>
-    <td>Postal Code:</td>
-    <td>{{model.PostalCode}}</td>
-  </tr>
-  <tr>
-    <td>Region:</td>
-    <td>{{model.Region}}</td>
-  </tr>
-</table>
+<div class="customer">
+  <h1>{{model.ContactName}}</h1>
+  
+  <table>
+    <tr>
+      <th>Customer ID:</th>
+      <td>{{model.id}}</td>
+    </tr>
+    <tr>
+      <th>Address:</th>
+      <td>{{model.Address}}</td>
+    </tr>
+    <tr>
+      <th>City:</th>
+      <td>{{model.City}}</td>
+    </tr>
+    <tr>
+      <th>Company Name:</th>
+      <td>{{model.CompanyName}}</td>
+    </tr>
+    <tr>
+      <th>Contact Title:</th>
+      <td>{{model.ContactTitle}}</td>
+    </tr>
+    <tr>
+      <th>Country:</th>
+      <td>{{model.Country}}</td>
+    </tr>
+    <tr>
+      <th>Fax:</th>
+      <td>{{model.Fax}}</td>
+    </tr>
+    <tr>
+      <th>Phone:</th>
+      <td>{{model.Phone}}</td>
+    </tr>
+    <tr>
+      <th>Postal Code:</th>
+      <td>{{model.PostalCode}}</td>
+    </tr>
+    <tr>
+      <th>Region:</th>
+      <td>{{model.Region}}</td>
+    </tr>
+  </table>
+  
+  {{#link-to 'customers'}}Hide customer details{{/link-to}}
 
-{{#link-to 'customers'}}Back to customers{{/link-to}}
+</div>

@@ -1,7 +1,16 @@
-{{#each customer in controller}}
-  {{#link-to 'customer' customer.id tagName="li"}}
-    {{customer.ContactName}}
-  {{/link-to}}
-{{/each}}
+<div class="customers">
+  <h1 {{action 'sortByName'}}>Customers
+      <span class="caret"></span>
+  </h1>
+  
+  <ul>
+    {{#each customer in controller}}
+    {{#link-to 'customer' customer.id tagName="li"}}
+      {{customer.ContactName}}
+    {{/link-to}}
+  {{/each}}
+  </ul>
+  
+</div>
 
-<a href='#' {{action 'sortByName'}}>Sort by Name</a>
+{{outlet}}
