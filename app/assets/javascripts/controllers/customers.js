@@ -7,7 +7,7 @@ App.CustomersController = Ember.ArrayController.extend({
   filteredResults: function() {
     var filter = this.get('filterText');
     return this.get('arrangedContent').filter(function(item, index, enumerable) {
-      return item._data.ContactName.toLowerCase().indexOf(filter) !== -1;
+      return item.ContactName.toLowerCase().indexOf(filter) !== -1;
     });
   }.property('filterText', 'sortProperties'),
       

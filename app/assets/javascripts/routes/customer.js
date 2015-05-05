@@ -1,5 +1,5 @@
 App.CustomerRoute = Ember.Route.extend({
   model: function(params) {
-    return this.store.find('customer', params.customerId);
+    return data.d.results.findBy('CustomerID', params.customerId);
   }
 })

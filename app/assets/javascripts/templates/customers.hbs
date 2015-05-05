@@ -7,7 +7,7 @@
   
   <ul>
     {{#each customer in filteredResults}}
-    {{#link-to 'customer' customer.id tagName="li"}}
+    {{#link-to 'customer' customer.CustomerID tagName="li"}}
       {{customer.ContactName}}
     {{/link-to}}
   {{/each}}
